@@ -71,7 +71,6 @@ def train(trainconfig):
         if step % trainconfig.eval_step == 0:
             with torch.no_grad():
                 ssim_eval, psnr_eval = test(model, test_loader)
-            print(f'\nStep : {step} | SSIM : {ssim_eval:.4f} | PSNR : {psnr_eval:.4f}')
             ssims.append(ssim_eval)
             psnrs.append(psnr_eval)
 
