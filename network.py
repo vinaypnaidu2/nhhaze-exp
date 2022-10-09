@@ -87,8 +87,8 @@ class B_transformer(nn.Module):
         self.apply_coeffs = ApplyCoeffs()
 
         self.u_net = UNet(n_channels=3)
-        # self.u_net_mini = UNet(n_channels=3)
         self.u_net_mini = UNet(n_channels=3)
+        #self.u_net_mini = UNet_mini(n_channels=3)
         self.smooth = nn.PReLU()
         self.fusion = nn.Sequential(
             nn.Conv2d(in_channels=9, out_channels = 16, kernel_size = 3, stride=1, padding=1),
